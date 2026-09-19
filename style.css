@@ -320,3 +320,9 @@
     .toolbar{ padding:14px 20px; }
     .portfolio{ padding:22px 20px 44px; }
   }
+
+#visit-slot{
+  display:block;
+  width:100%;
+  text-align:center;
+}
