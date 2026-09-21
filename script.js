@@ -10,31 +10,31 @@ const LOCALITIES = [
   {
     name: "Vasant Vihar",
     properties: [
-      { code:"A - 16/5 Vasant Vihar", tags:[["Ground Floor with Basement","2nd Floor","400 sq yards"]], age:"Old Resale (10-12 months)", locationUrl:"https://www.google.com/maps/place/16,+A-9+St,+Block+A,+Vasant+Vihar,+New+Delhi,+Delhi+110057/@28.5641599,77.1622793,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1da4647ba4dd:0xfdcf454749a041ae!8m2!3d28.5641552!4d77.1648542?entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D" },
-      { code:"F - 3/16 Vasant Vihar", tags:[["Ground Floor with Basement","400 sq yards","Third Floor with Terrace"]], age:"Old Resale (2-4 months)", locationUrl:"#" },
+      { code:"A - 16/5 Vasant Vihar", tags:[["Ground Floor with Basement","2nd Floor","400 sq yards"],["South Facing"]], age:"Old Resale (10-12 months)", locationUrl:"https://www.google.com/maps/place/16,+A-9+St,+Block+A,+Vasant+Vihar,+New+Delhi,+Delhi+110057/@28.5641599,77.1622793,17z/data=!3m1!4b1!4m5!3m4!1s0x390d1da4647ba4dd:0xfdcf454749a041ae!8m2!3d28.5641552!4d77.1648542?entry=ttu&g_ep=EgoyMDI2MDkxNS4wIKXMDSoASAFQAw%3D%3D" },
+      { code:"F - 3/16 Vasant Vihar", tags:[["Ground Floor with Basement","400 sq yards","Third Floor with Terrace"],["West Facing"]], age:"Old Resale (2-4 months)", locationUrl:"#" },
       { code:"B - 7/1B Vasant Vihar", tags:[["Second Floor","280 sq yards","Park Facing"],["North East Facing","BOOKING"]], age:"Old Resale (12–14 months)", locationUrl:"#" },
-      { code:"C - 1/9 Vasant Vihar", tags:[["Third Floor with Terrace","600 sq yards"],["Corner","Old Construction"]], age:"Old Resale", locationUrl:"#" },
+      { code:"C - 1/9 Vasant Vihar", tags:[["Third Floor with Terrace","600 sq yards"],["Corner","Old Construction","West Facing"]], age:"Old Resale", locationUrl:"#" },
       { code:"B - 1/27 Vasant Vihar", tags:[["Second Floor","400 sq yards"],["North East Facing","Prebooking"]], age:"Old Resale (18–20 months)", locationUrl:"#" },
-      { code:"D - 1/22 Vasant Vihar", tags:[["First Floor"],["North Facing","Old Construction"]], age:"Old Resale (18–20 months)", locationUrl:"#" },
+      { code:"D - 1/22 Vasant Vihar", tags:[["First Floor"],["North East Facing","Old Construction"]], age:"Old Resale (18–20 months)", locationUrl:"#" },
     ]
   },
   {
     name: "Anand Niketan",
     properties: [
-      { code:"C - 57 Anand Niketan", tags:[["First Floor","Second Floor","Third Floor with Terrace"],["400 sq yards","Park Facing","Booking"]], age:"Old Resale  (16–18 months)", locationUrl:"#" },
-      { code:"C - 34 Anand Niketan", tags:[["Ground Floor","400 sq yards","Newly Renovated"],["Park Facing","25-Year-Old Construction"]], age:"Old Resale (25 years)", locationUrl:"#" },
+      { code:"C - 57 Anand Niketan", tags:[["First Floor","Second Floor","Third Floor with Terrace"],["400 sq yards","Park Facing","Booking","South East Facing"]], age:"Old Resale  (16–18 months)", locationUrl:"#" },
+      { code:"C - 34 Anand Niketan", tags:[["Ground Floor","400 sq yards","Newly Renovated"],["Park Facing","25-Year-Old Construction","North Facing"]], age:"Old Resale (25 years)", locationUrl:"#" },
     ]
   },
   {
     name: "Greater Kailash - 1 (GK-1)",
     properties: [
-      { code:"E - 25 Greater Kailash-1", tags:[["First Floor","Basement & Ground Floor","300 sq yards","BOOKING"]], age:"Old Resale (14–16 months)", locationUrl:"#" },
+      { code:"E - 25 Greater Kailash-1", tags:[["First Floor","Basement & Ground Floor","300 sq yards","BOOKING"],["North Facing"]], age:"Old Resale (14–16 months)", locationUrl:"#" },
     ]
   },
   {
     name: "Shanti Niketan",
     properties: [
-      { code:"4/9, Shanti Niketan", tags:[["Ground Floor with Basement","North Facing","10 year Old Construction"],["North Facing","Front Portion"]], age:"Old Resale (10 years)", locationUrl:"#" },
+      { code:"4/9, Shanti Niketan", tags:[["Ground Floor with Basement","North East Facing","10 year Old Construction"],["North Facing","Front Portion"]], age:"Old Resale (10 years)", locationUrl:"#" },
     ]
   }
 ];
