@@ -50,13 +50,15 @@ function tagRowsHTML(tagGroups, listMode){
   ).join('');
 }
 
+{/* <span class="locality-count">${loc.properties.length} ${loc.properties.length === 1 ? 'Unit' : 'Units'}</span> */}
+
 function renderGrid(){
   return LOCALITIES.map(loc => `
     <section class="locality">
       <div class="locality-head">
         ${ICON_LOCALITY_PIN}
         <h2>${loc.name}</h2>
-        <span class="locality-count">${loc.properties.length} ${loc.properties.length === 1 ? 'Unit' : 'Units'}</span>
+        <!-- One can embed the unit number here if needed -->
       </div>
       <div class="grid-view">
         ${loc.properties.map(p => `
