@@ -64,7 +64,7 @@ function renderGrid(){
             <h3 class="p-title">${p.code}</h3>
             <div class="tag-groups">${tagRowsHTML(p.tags, false)}</div>
             <div class="link-list">
-              <div class="link-item action">${ICON_PRESENTATION}<span><a href="${loc.properties.presentation}">Site Presentation</a></span></div>
+              <div class="link-item action">${ICON_PRESENTATION}<span><a href="${p.presentation}" target="_blank" rel="noopener">Site Presentation</a></span></div>
               <div class="link-item loc">${ICON_PIN}<a href="${p.locationUrl}" target="_blank" rel="noopener">Click here for Location</a></div>
               <div class="link-item info">${ICON_BUILDING}<span>${p.age}</span></div>
             </div>
