@@ -239,7 +239,7 @@
   }
   .list-header-row{
     display:grid;
-    grid-template-columns: 1.7fr 2.6fr 1.3fr 1.4fr 1.5fr;
+    grid-template-columns: 1.5fr 1.7fr 1.3fr 1.3fr 1.4fr 1.5fr;
     gap:18px;
     padding:11px 22px;
     background:#F4F2EC;
@@ -251,7 +251,7 @@
   }
   .list-row{
     display:grid;
-    grid-template-columns: 1.7fr 2.6fr 1.3fr 1.4fr 1.5fr;
+    grid-template-columns: 1.5fr 1.7fr 1.3fr 1.3fr 1.4fr 1.5fr;
     gap:18px;
     align-items:center;
     padding:16px 22px;
@@ -325,4 +325,28 @@
   display:block;
   width:100%;
   text-align:center;
+}
+
+.floor-list {
+  margin: 8px 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.floor-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.floor-bullet {
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.list-floor-list {
+  margin: 0;
 }
