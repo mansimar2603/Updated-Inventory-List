@@ -13,8 +13,8 @@ const LOCALITIES = [
       { code:"A - 16/5 Vasant Vihar", floors:["Ground Floor with Basement","2nd Floor"], tags:[["400 sq yards","South Facing"]], age:"Under Construction (10-12 months)", locationUrl:"https://www.google.com/maps/place/28%C2%B033'38.3%22N+77%C2%B010'03.6%22E/@28.5606461,77.1651039,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5606461!4d77.1676788!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1xb5bNqtT_QTvcjGQklRpzQys3apd9xQ7/view?usp=sharing" },
       { code:"F - 3/16 Vasant Vihar", floors:["Ground Floor with Basement", "Third Floor with Terrace"], tags:[["400 sq yards","West Facing"]], age:"Ready (2 months)", locationUrl:"https://www.google.com/maps/place/28%C2%B033'32.0%22N+77%C2%B009'38.5%22E/@28.5588741,77.158123,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5588741!4d77.1606979!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1weTMvDWfY0FbQCNIaYJlpImzNEBI92rv/view?usp=sharing" },
       { code:"B - 7/1B Vasant Vihar", floors:["Second Floor"], tags:[["280 sq yards","Park Facing"],["North East Facing","BOOKING"]], age:"Under Construction", locationUrl:"https://www.google.com/maps/place/28%C2%B033'56.5%22N+77%C2%B009'43.6%22E/@28.5657043,77.1595421,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5657043!4d77.162117!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1zDZGQ_emKB2Aev27QAfPBuZSCVJkhx5S/view?usp=sharing" },
-      { code:"C - 1/9 Vasant Vihar", floors:["Third Floor with Terrace"], tags:[["600 sq yards"],["Corner","Old Construction","West Facing"]], age:"Old Resale (11-12 years)", locationUrl:"#", presentation: "#" },
-      { code:"B - 1/27 Vasant Vihar", floors:["Second Floor"], tags:[["400 sq yards"],["North East Facing","Prebooking"]], age:"Old Resale (18–20 months)", locationUrl:"#", presentation: "#" },
+      { code:"C - 1/9 Vasant Vihar", floors:["Third Floor with Terrace"], tags:[["600 sq yards"],["Corner","Old Construction","West Facing"]], age:"Old Resale (11-12 years)", locationUrl:"https://www.google.com/maps/place/28%C2%B034'14.3%22N+77%C2%B009'42.6%22E/@28.5706387,77.1592522,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5706387!4d77.1618271?hl=en&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+      { code:"B - 1/27 Vasant Vihar", floors:["Second Floor"], tags:[["400 sq yards"],["North East Facing","Prebooking"]], age:"Old Resale (18–20 months)", locationUrl:"https://www.google.com/maps/place/28%C2%B034'06.6%22N+77%C2%B009'47.5%22E/@28.5684967,77.1606178,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5684967!4d77.1631927?hl=en&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
       // { code:"D - 1/22 Vasant Vihar", floors:["First Floor"], tags:[["North East Facing","Old Construction"]], age:"Old Resale (18–20 months)", locationUrl:"#", presentation: "#" },
     ]
   },
@@ -88,9 +88,30 @@ function renderGrid(){
               ${tagRowsHTML(p.tags, false)}
             </div>
             <div class="link-list">
-              <div class="link-item action">${ICON_PRESENTATION}<span><a href="${p.presentation}" target="_blank" rel="noopener">Site Presentation</a></span></div>
-              <div class="link-item loc">${ICON_PIN}<a href="${p.locationUrl}" target="_blank" rel="noopener">Click here for Location</a></div>
-              <div class="link-item info">${ICON_BUILDING}<span>${p.age}</span></div>
+              <div class="link-item action">
+                ${ICON_PRESENTATION}
+                <span>
+                  ${
+                    p.presentation === "#"
+                      ? "Presentation not available"
+                      : `<a href="${p.presentation}" target="_blank" rel="noopener">Site Presentation</a>`
+                  }
+                </span>
+              </div>
+
+              <div class="link-item loc">
+                ${ICON_PIN}
+                ${
+                  p.locationUrl === "#"
+                    ? "<span>Location Not Available</span>"
+                    : `<a href="${p.locationUrl}" target="_blank" rel="noopener">Click here for Location</a>`
+                }
+              </div>
+
+              <div class="link-item info">
+                ${ICON_BUILDING}
+                <span>${p.age}</span>
+              </div>
             </div>
           </article>
         `).join('')}
@@ -114,12 +135,35 @@ function renderList(){
           <div class="list-row">
             <h3 class="p-title">${p.code}</h3>
             ${floorListHTML(p.floors, true)}
+            
             <div class="tag-groups">
               ${tagRowsHTML(p.tags, true)}
             </div>
-            <div class="list-col action">${ICON_PRESENTATION}<span><a href="${p.presentation}" target="_blank" rel="noopener">Site Presentation</a></span></div>
-            <div class="list-col loc">${ICON_PIN}<a href="${p.locationUrl}" target="_blank" rel="noopener">Click here for Location</a></div>
-            <div class="list-col info">${ICON_BUILDING}<span>${p.age}</span></div>
+
+            <div class="list-col action">
+              ${ICON_PRESENTATION}
+              <span>
+                ${
+                  p.presentation === "#"
+                    ? "Presentation not available"
+                    : `<a href="${p.presentation}" target="_blank" rel="noopener">Site Presentation</a>`
+                }
+              </span>
+            </div>
+
+            <div class="list-col loc">
+              ${ICON_PIN}
+              ${
+                p.locationUrl === "#"
+                  ? "<span>Location Not Available</span>"
+                  : `<a href="${p.locationUrl}" target="_blank" rel="noopener">Click here for Location</a>`
+              }
+            </div>
+
+            <div class="list-col info">
+              ${ICON_BUILDING}
+              <span>${p.age}</span>
+            </div>
           </div>
         `).join('')}
       </div>
