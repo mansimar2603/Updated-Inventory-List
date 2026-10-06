@@ -350,3 +350,55 @@
 .list-floor-list {
   margin: 0;
 }
+
+
+
+
+
+
+
+/* Notes Styling */
+.extra-notes {
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding: 25px 30px 20px;
+  box-sizing: border-box;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  color: #12345b;
+  margin-bottom: 20px;
+}
+
+.notes-head {
+  margin: 0 0 18px;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 700;
+  color: #12345b;
+}
+
+.notes-list {
+  margin: 0 auto;
+  padding: 0;
+  list-style-position: outside;
+  max-width: 1000px;
+}
+
+.notes-list li {
+  margin: 0 0 10px;
+  padding-left: 8px;
+  font-size: 15px;
+  line-height: 1.55;
+  text-align: left;
+  color: #12345b;
+}
+
+.notes-list li:last-child {
+  margin-bottom: 0;
+}
+
+.sub-note {
+  display: block;
+  margin-top: 2px;
+}
