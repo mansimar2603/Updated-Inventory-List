@@ -1,0 +1,302 @@
+/* ============ ICONS ============ */
+const ICON_PRESENTATION = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="8" y1="20" x2="16" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/></svg>`;
+const ICON_PIN = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>`;
+const ICON_BUILDING = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V6a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v15"/><path d="M14 21V10a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v11"/><line x1="2" y1="21" x2="22" y2="21"/><line x1="7" y1="9" x2="9" y2="9"/><line x1="7" y1="13" x2="9" y2="13"/><line x1="7" y1="17" x2="9" y2="17"/></svg>`;
+const ICON_LOCALITY_PIN = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>`;
+
+/* ============ DATA ============ */
+/* Edit this array to update inventory. Each property belongs to a locality. */
+const LOCALITIES = [
+  {
+    name: "Vasant Vihar",
+    properties: [
+      { code:"A - 16/5 Vasant Vihar", floors:["Ground Floor with Basement","2nd Floor"], tags:[["400 sq yards","South Facing"]], status:"Under Construction", completionFrom: "2027-10-01", completionTo: "2027-10-27", locationUrl:"https://www.google.com/maps/place/28%C2%B033'38.3%22N+77%C2%B010'03.6%22E/@28.5606461,77.1651039,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5606461!4d77.1676788!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1xb5bNqtT_QTvcjGQklRpzQys3apd9xQ7/view?usp=sharing" },
+      { code:"F - 3/16 Vasant Vihar", floors:["Ground Floor with Basement", "Third Floor with Terrace"], tags:[["400 sq yards","West Facing"]], status: "Ready", readyDate: "2026-12-01" , locationUrl:"https://www.google.com/maps/place/28%C2%B033'32.0%22N+77%C2%B009'38.5%22E/@28.5588741,77.158123,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5588741!4d77.1606979!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1weTMvDWfY0FbQCNIaYJlpImzNEBI92rv/view?usp=sharing" },
+      { code:"B - 7/1B Vasant Vihar", floors:["Second Floor"], tags:[["280 sq yards","Park Facing"],["North East Facing","BOOKING"]], status:"Under Construction", locationUrl:"https://www.google.com/maps/place/28%C2%B033'56.5%22N+77%C2%B009'43.6%22E/@28.5657043,77.1595421,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5657043!4d77.162117!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1zDZGQ_emKB2Aev27QAfPBuZSCVJkhx5S/view?usp=sharing" },
+      { code:"C - 1/9 Vasant Vihar", floors:["Third Floor with Terrace"], tags:[["600 sq yards"],["Corner","Old Construction","West Facing"]], status:"Old Resale", constructionDate:"2015-01-01", locationUrl:"https://www.google.com/maps/place/28%C2%B034'14.3%22N+77%C2%B009'42.6%22E/@28.5706387,77.1592522,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5706387!4d77.1618271?hl=en&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+      { code:"B - 1/27 Vasant Vihar", floors:["Second Floor"], tags:[["400 sq yards"],["North East Facing","Prebooking"]], status:"Old Resale", constructionDate:"2024-01-01", locationUrl:"https://www.google.com/maps/place/28%C2%B034'06.6%22N+77%C2%B009'47.5%22E/@28.5684967,77.1606178,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5684967!4d77.1631927?hl=en&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+      // { code:"D - 1/22 Vasant Vihar", floors:["First Floor"], tags:[["North East Facing","Old Construction"]], age:"Old Resale (18–20 months)", locationUrl:"#", presentation: "#" },
+    ]
+  },
+  {
+    name: "Anand Niketan",
+    properties: [
+      { code:"C - 57 Anand Niketan", floors:["First Floor","Second Floor","Third Floor with Terrace"], tags:[["400 sq yards","Park Facing","South East Facing"]], status:"Booking", completionFrom:"2028-02-01",completionTo:"2028-04-01", locationUrl:"https://www.google.com/maps/place/28%C2%B034'40.8%22N+77%C2%B009'49.0%22E/@28.5779972,77.1610298,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5779972!4d77.1636047!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+      // { code:"C - 34 Anand Niketan", tags:[["Ground Floor","400 sq yards","Newly Renovated"],["Park Facing","25-Year-Old Construction","North Facing"]], age:"Old Resale (25 years)", locationUrl:"#" },
+    ]
+  },
+  {
+    name: "Greater Kailash - 1 (GK-1)",
+    properties: [
+      { code:"E - 25 Greater Kailash-1", floors:["First Floor","Basement & Ground Floor"], tags:[["300 sq yards","Booking"],["North Facing"]], status:"Under Construction", completionFrom:"2026-10-01", completionTo: "2027-10-01", locationUrl:"#", presentation: "#" },
+    ]
+  },
+  {
+    name: "Shanti Niketan",
+    properties: [
+      { code:"4/9, Shanti Niketan", floors:["Ground Floor with Basement(Front Portion)"], tags:[["North East Facing"]], status: "Old Resale", constructionDate:"2016-01-01" , locationUrl:"#", presentation: "#" },
+    ]
+  }
+];
+
+
+function floorListHTML(floors = [], listMode = false){
+  if (!floors.length) return '';
+
+  const cls = listMode ? 'floor-list list-floor-list' : 'floor-list';
+
+  return `
+    <div class="${cls}">
+      ${floors.map(floor => `
+        <div class="floor-item">
+          <span class="floor-bullet">•</span>
+          <span>${floor}</span>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function getDynamicStatus(property) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  /* =========================
+     UNDER CONSTRUCTION / BOOKING
+     ========================= */
+  if (
+    property.status === "Under Construction" ||
+    property.status === "Booking"
+  ) {
+    // No completion dates available
+    if (!property.completionFrom || !property.completionTo) {
+      return property.status;
+    }
+
+    const completionFrom = new Date(`${property.completionFrom}T00:00:00`);
+    const completionTo = new Date(`${property.completionTo}T00:00:00`);
+
+    // Invalid dates
+    if (
+      Number.isNaN(completionFrom.getTime()) ||
+      Number.isNaN(completionTo.getTime())
+    ) {
+      return property.status;
+    }
+
+    // Completion period has started
+    if (today >= completionFrom) {
+      return "Ready";
+    }
+
+    function getRemainingMonths(targetDate) {
+      let months =
+        (targetDate.getFullYear() - today.getFullYear()) * 12 +
+        (targetDate.getMonth() - today.getMonth());
+
+      if (targetDate.getDate() < today.getDate()) {
+        months--;
+      }
+
+      return Math.max(0, months);
+    }
+
+    const monthsFrom = getRemainingMonths(completionFrom);
+    const monthsTo = getRemainingMonths(completionTo);
+
+    return `${property.status} (${monthsFrom}–${monthsTo} months)`;
+  }
+
+  /* =========================
+     READY
+     ========================= */
+  if (property.status === "Ready") {
+    if (!property.readyDate) {
+      return "Ready";
+    }
+
+    const readyDate = new Date(`${property.readyDate}T00:00:00`);
+
+    if (Number.isNaN(readyDate.getTime())) {
+      return "Ready";
+    }
+
+    let months =
+      (today.getFullYear() - readyDate.getFullYear()) * 12 +
+      (today.getMonth() - readyDate.getMonth());
+
+    if (today.getDate() < readyDate.getDate()) {
+      months--;
+    }
+
+    months = Math.max(0, months);
+
+    if (months === 0) {
+      return "Ready";
+    }
+
+    if (months < 12) {
+      return `Ready (${months} ${months === 1 ? "month" : "months"})`;
+    }
+
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+
+    if (remainingMonths === 0) {
+      return `Ready (${years} ${years === 1 ? "year" : "years"})`;
+    }
+
+    return `Ready (${years} ${years === 1 ? "year" : "years"} ${remainingMonths} ${
+      remainingMonths === 1 ? "month" : "months"
+    })`;
+  }
+
+  /* =========================
+     OLD RESALE
+     ========================= */
+  if (property.status === "Old Resale") {
+    // No construction date available
+    if (!property.constructionDate) {
+      return "Old Resale";
+    }
+
+    const constructionDate = new Date(
+      `${property.constructionDate}T00:00:00`
+    );
+
+    if (Number.isNaN(constructionDate.getTime())) {
+      return "Old Resale";
+    }
+
+    let months =
+      (today.getFullYear() - constructionDate.getFullYear()) * 12 +
+      (today.getMonth() - constructionDate.getMonth());
+
+    if (today.getDate() < constructionDate.getDate()) {
+      months--;
+    }
+
+    months = Math.max(0, months);
+
+    if (months < 12) {
+      return `Old Resale (${months} ${
+        months === 1 ? "month" : "months"
+      })`;
+    }
+
+    const years = Math.floor(months / 12);
+    const remainingMonths = months % 12;
+
+    if (remainingMonths === 0) {
+      return `Old Resale (${years} ${
+        years === 1 ? "year" : "years"
+      })`;
+    }
+
+    return `Old Resale (${years} ${
+      years === 1 ? "year" : "years"
+    } ${remainingMonths} ${
+      remainingMonths === 1 ? "month" : "months"
+    })`;
+  }
+
+  return property.status || "";
+}
+
+/* ============ RENDER ============ */
+const portfolio = document.getElementById('portfolio');
+let currentView = 'grid';
+
+function tagRowsHTML(tagGroups, listMode){
+  const cls = listMode ? 'list-tags' : 'tag-row';
+  return tagGroups.map(group =>
+    `<div class="${cls}">${group.map(t => `<span class="tag">${t}</span>`).join('')}</div>`
+  ).join('');
+}
+
+{/* <span class="locality-count">${loc.properties.length} ${loc.properties.length === 1 ? 'Unit' : 'Units'}</span> */}
+
+function renderGrid(){
+  return LOCALITIES.map(loc => `
+    <section class="locality">
+      <div class="locality-head">
+        ${ICON_LOCALITY_PIN}
+        <h2>${loc.name}</h2>
+        <!-- One can embed the unit number here if needed -->
+      </div>
+      <div class="grid-view">
+        ${loc.properties.map(p => `
+          <article class="p-card">
+            <h3 class="p-title">${p.code}</h3>
+            ${floorListHTML(p.floors)}
+            <div class="tag-groups">
+              ${tagRowsHTML(p.tags, false)}
+            </div>
+            <div class="link-list">
+              ${ p.presentation && p.presentation !== "#" ? ` <div class="link-item action"> ${ICON_PRESENTATION} <span> <a href="${p.presentation}" target="_blank" rel="noopener"> Site Presentation </a> </span> </div> ` : "" } ${ p.locationUrl && p.locationUrl !== "#" ? ` <div class="link-item loc"> ${ICON_PIN} <a href="${p.locationUrl}" target="_blank" rel="noopener"> Click here for Location </a> </div> ` : "" }
+
+              <div class="link-item info">
+                ${ICON_BUILDING}
+                <span>${getDynamicStatus(p)}</span>
+              </div>
+            </div>
+          </article>
+        `).join('')}
+      </div>
+    </section>
+  `).join('');
+}
+
+function renderList(){
+  return LOCALITIES.map(loc => `
+    <section class="locality">
+      <div class="locality-head">
+        ${ICON_LOCALITY_PIN}
+        <h2>${loc.name}</h2>
+      </div>
+      <div class="list-view">
+        <div class="list-header-row">
+          <span>Unit</span><span>Floors</span><span>Details</span><span>Presentation</span><span>Location</span><span>Status</span>
+        </div>
+        ${loc.properties.map(p => `
+          <div class="list-row">
+            <h3 class="p-title">${p.code}</h3>
+            ${floorListHTML(p.floors, true)}
+            
+            <div class="tag-groups">
+              ${tagRowsHTML(p.tags, true)}
+            </div>
+
+            ${ p.presentation && p.presentation !== "#" ? ` <div class="list-col action"> ${ICON_PRESENTATION} <span> <a href="${p.presentation}" target="_blank" rel="noopener"> Site Presentation </a> </span> </div> ` : "" } ${ p.locationUrl && p.locationUrl !== "#" ? ` <div class="list-col loc"> ${ICON_PIN} <a href="${p.locationUrl}" target="_blank" rel="noopener"> Click here for Location </a> </div> ` : "" }
+
+            <div class="list-col info">
+              ${ICON_BUILDING}
+              <span>${getDynamicStatus(p)}</span>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </section>
+  `).join('');
+}
+
+function render(){
+  portfolio.innerHTML = currentView === 'grid' ? renderGrid() : renderList();
+}
+
+const btnGrid = document.getElementById('btn-grid');
+const btnList = document.getElementById('btn-list');
+
+function setView(view){
+  currentView = view;
+  btnGrid.classList.toggle('active', view === 'grid');
+  btnList.classList.toggle('active', view === 'list');
+  btnGrid.setAttribute('aria-pressed', view === 'grid');
+  btnList.setAttribute('aria-pressed', view === 'list');
+  render();
+}
+
+btnGrid.addEventListener('click', () => setView('grid'));
+btnList.addEventListener('click', () => setView('list'));
+
+render();

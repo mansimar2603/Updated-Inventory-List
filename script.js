@@ -1,3 +1,4 @@
+// Okay then give me what changes i should make as giving you script.js:
 /* ============ ICONS ============ */
 const ICON_PRESENTATION = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1"/><line x1="8" y1="20" x2="16" y2="20"/><line x1="12" y1="16" x2="12" y2="20"/></svg>`;
 const ICON_PIN = `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>`;
@@ -10,34 +11,212 @@ const LOCALITIES = [
   {
     name: "Vasant Vihar",
     properties: [
-      { code:"A - 16/5 Vasant Vihar", floors:["Ground Floor with Basement","2nd Floor"], tags:[["400 sq yards","South Facing"]], age:"Under Construction (10-12 months)", locationUrl:"https://www.google.com/maps/place/28%C2%B033'38.3%22N+77%C2%B010'03.6%22E/@28.5606461,77.1651039,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5606461!4d77.1676788!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1xb5bNqtT_QTvcjGQklRpzQys3apd9xQ7/view?usp=sharing" },
-      { code:"F - 3/16 Vasant Vihar", floors:["Ground Floor with Basement", "Third Floor with Terrace"], tags:[["400 sq yards","West Facing"]], age:"Ready (2 months)", locationUrl:"https://www.google.com/maps/place/28%C2%B033'32.0%22N+77%C2%B009'38.5%22E/@28.5588741,77.158123,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5588741!4d77.1606979!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1weTMvDWfY0FbQCNIaYJlpImzNEBI92rv/view?usp=sharing" },
-      { code:"B - 7/1B Vasant Vihar", floors:["Second Floor"], tags:[["280 sq yards","Park Facing"],["North East Facing","BOOKING"]], age:"Under Construction", locationUrl:"https://www.google.com/maps/place/28%C2%B033'56.5%22N+77%C2%B009'43.6%22E/@28.5657043,77.1595421,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5657043!4d77.162117!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1zDZGQ_emKB2Aev27QAfPBuZSCVJkhx5S/view?usp=sharing" },
-      { code:"C - 1/9 Vasant Vihar", floors:["Third Floor with Terrace"], tags:[["600 sq yards"],["Corner","Old Construction","West Facing"]], age:"Old Resale (11-12 years)", locationUrl:"https://www.google.com/maps/place/28%C2%B034'14.3%22N+77%C2%B009'42.6%22E/@28.5706387,77.1592522,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5706387!4d77.1618271?hl=en&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
-      { code:"B - 1/27 Vasant Vihar", floors:["Second Floor"], tags:[["400 sq yards"],["North East Facing","Prebooking"]], age:"Old Resale (18–20 months)", locationUrl:"https://www.google.com/maps/place/28%C2%B034'06.6%22N+77%C2%B009'47.5%22E/@28.5684967,77.1606178,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5684967!4d77.1631927?hl=en&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+      { code:"A - 16/5 Vasant Vihar", floors:["Ground Floor with Basement","2nd Floor"], tags:[["400 sq yards","South Facing"]], age:"Under Construction (10-12 months)", ageConfig: {
+  type: "construction",
+  status: "Under Construction",
+  referenceDate: "2026-10-10",
+  minMonths: 10,
+  maxMonths: 12
+}, locationUrl:"https://www.google.com/maps/place/28%C2%B033'38.3%22N+77%C2%B010'03.6%22E/@28.5606461,77.1651039,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5606461!4d77.1676788!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1xb5bNqtT_QTvcjGQklRpzQys3apd9xQ7/view?usp=sharing" },
+      { code:"F - 3/16 Vasant Vihar", floors:["Ground Floor with Basement", "Third Floor with Terrace"], tags:[["400 sq yards","West Facing"]], age:"Ready (2 months)", ageConfig: {
+  type: "ready",
+  readyDate: "2026-08-10"
+}, locationUrl:"https://www.google.com/maps/place/28%C2%B033'32.0%22N+77%C2%B009'38.5%22E/@28.5588741,77.158123,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5588741!4d77.1606979!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1weTMvDWfY0FbQCNIaYJlpImzNEBI92rv/view?usp=sharing" },
+      { code:"B - 7/1B Vasant Vihar", floors:["Second Floor"], tags:[["280 sq yards","Park Facing"],["North East Facing","BOOKING"]], age:"Under Construction (12 months)", ageConfig: {
+  type: "construction",
+  status: "Under Construction",
+  referenceDate: "2026-10-10",
+  minMonths: 12,
+  maxMonths: 12
+}, locationUrl:"https://www.google.com/maps/place/28%C2%B033'56.5%22N+77%C2%B009'43.6%22E/@28.5657043,77.1595421,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5657043!4d77.162117!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1zDZGQ_emKB2Aev27QAfPBuZSCVJkhx5S/view?usp=sharing" },
+      { code:"C - 1/9 Vasant Vihar", floors:["Third Floor with Terrace"], tags:[["600 sq yards"],["Corner","Old Construction","West Facing"]], age:"Old Resale (11-12 years)", ageConfig: {
+  type: "old-resale-years-range",
+  referenceDate: "2026-10-10",
+  minYears: 11,
+  maxYears: 12
+},locationUrl:"https://www.google.com/maps/place/28%C2%B034'14.3%22N+77%C2%B009'42.6%22E/@28.5706387,77.1592522,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5706387!4d77.1618271?hl=en&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+      { code:"B - 1/27 Vasant Vihar", floors:["Second Floor"], tags:[["400 sq yards"],["North East Facing"]], age:"Prebooking (18–20 months)", ageConfig: {
+  type: "construction",
+  status: "Prebooking",
+  referenceDate: "2026-10-10",
+  minMonths: 18,
+  maxMonths: 20
+}, locationUrl:"https://www.google.com/maps/place/28%C2%B034'06.6%22N+77%C2%B009'47.5%22E/@28.5684967,77.1606178,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5684967!4d77.1631927?hl=en&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
       // { code:"D - 1/22 Vasant Vihar", floors:["First Floor"], tags:[["North East Facing","Old Construction"]], age:"Old Resale (18–20 months)", locationUrl:"#", presentation: "#" },
     ]
   },
   {
     name: "Anand Niketan",
     properties: [
-      { code:"C - 57 Anand Niketan", floors:["First Floor","Second Floor","Third Floor with Terrace"], tags:[["400 sq yards","Park Facing","South East Facing"]], age:"Booking  (16–18 months)", locationUrl:"https://www.google.com/maps/place/28%C2%B034'40.8%22N+77%C2%B009'49.0%22E/@28.5779972,77.1610298,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5779972!4d77.1636047!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+      { code:"C - 57 Anand Niketan", floors:["First Floor","Second Floor","Third Floor with Terrace"], tags:[["400 sq yards","Park Facing","South East Facing"]], age:"Booking  (16–18 months)",ageConfig: {
+  type: "construction",
+  status: "Booking",
+  referenceDate: "2026-10-10",
+  minMonths: 16,
+  maxMonths: 18
+}, locationUrl:"https://www.google.com/maps/place/28%C2%B034'40.8%22N+77%C2%B009'49.0%22E/@28.5779972,77.1610298,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5779972!4d77.1636047!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
       // { code:"C - 34 Anand Niketan", tags:[["Ground Floor","400 sq yards","Newly Renovated"],["Park Facing","25-Year-Old Construction","North Facing"]], age:"Old Resale (25 years)", locationUrl:"#" },
     ]
   },
   {
     name: "Greater Kailash - 1 (GK-1)",
     properties: [
-      { code:"E - 25 Greater Kailash-1", floors:["First Floor","Basement & Ground Floor"], tags:[["300 sq yards","Booking"],["North Facing"]], age:"Under Construction (12 months)", locationUrl:"#", presentation: "#" },
+      { code:"E - 25 Greater Kailash-1", floors:["First Floor","Basement & Ground Floor"], tags:[["300 sq yards","Booking"],["North Facing"]], age:"Under Construction (12 months)", ageConfig: {
+  type: "construction",
+  status: "Under Construction",
+  referenceDate: "2026-10-10",
+  minMonths: 12,
+  maxMonths: 12
+},locationUrl:"#", presentation: "#" },
     ]
   },
   {
     name: "Shanti Niketan",
     properties: [
-      { code:"4/9, Shanti Niketan", floors:["Ground Floor with Basement(Front Portion)"], tags:[["North East Facing"]], age:"Old Resale (10 years)", locationUrl:"#", presentation: "#" },
+      { code:"4/9, Shanti Niketan", floors:["Ground Floor with Basement(Front Portion)"], tags:[["North East Facing"]], age:"Old Resale (10 years)", ageConfig: {
+  type: "old-resale-years",
+  referenceDate: "2026-10-10",
+  years: 10
+}, locationUrl:"#", presentation: "#" },
     ]
   }
 ];
+
+
+/* ============ DYNAMIC PROPERTY STATUS & AGE ============ */
+
+// Returns completed calendar months between two dates.
+function getElapsedMonths(referenceDate, today = new Date()) {
+  if (!referenceDate) return null;
+
+  const start = new Date(`${referenceDate}T00:00:00`);
+
+  if (Number.isNaN(start.getTime())) return null;
+
+  const current = new Date(today);
+  current.setHours(0, 0, 0, 0);
+
+  if (start > current) return 0;
+
+  let months =
+    (current.getFullYear() - start.getFullYear()) * 12 +
+    (current.getMonth() - start.getMonth());
+
+  if (current.getDate() < start.getDate()) {
+    months--;
+  }
+
+  return Math.max(0, months);
+}
+
+function pluralize(value, unit) {
+  return `${value} ${unit}${value === 1 ? "" : "s"}`;
+}
+
+function formatMonthRange(min, max) {
+  if (min === max) {
+    return `${pluralize(min, "month")}`;
+  }
+
+  return `${min}–${max} months`;
+}
+
+function getDynamicAge(property) {
+  const config = property.ageConfig;
+
+  // Properties without dynamic configuration retain their original display.
+  if (!config) return property.age;
+
+  const elapsed = getElapsedMonths(
+    config.referenceDate || config.readyDate
+  );
+
+  // Invalid or missing dates should never produce NaN.
+  if (elapsed === null) return property.age;
+
+  /* OLD RESALE: SINGLE AGE IN YEARS INCREASES */
+  if (config.type === "old-resale-years") {
+    const years = config.years + Math.floor(elapsed / 12);
+
+    return `Old Resale (${pluralize(years, "year")})`;
+  }
+
+  /* OLD RESALE: YEAR RANGE INCREASES */
+  if (config.type === "old-resale-years-range") {
+    const yearsPassed = Math.floor(elapsed / 12);
+    const min = config.minYears + yearsPassed;
+    const max = config.maxYears + yearsPassed;
+
+    return `Old Resale (${min}–${max} years)`;
+  }
+
+  /* OLD RESALE: MONTH RANGE DECREASES */
+  if (config.type === "old-resale-month-range") {
+    const min = Math.max(0, config.minMonths - elapsed);
+    const max = Math.max(0, config.maxMonths - elapsed);
+
+    if (max === 0) return "Old Resale";
+
+    return `Old Resale (${formatMonthRange(min, max)})`;
+  }
+
+  /* READY: TIME SINCE COMPLETION INCREASES */
+  if (config.type === "ready") {
+    const monthsReady = getElapsedMonths(config.readyDate);
+
+    if (monthsReady === null || monthsReady === 0) {
+      return "Ready";
+    }
+
+    return `Ready (${pluralize(monthsReady, "month")})`;
+  }
+
+  /* PREBOOKING / BOOKING / UNDER CONSTRUCTION */
+  if (config.type === "construction") {
+    if (
+      !Number.isFinite(config.minMonths) ||
+      !Number.isFinite(config.maxMonths) ||
+      config.minMonths < 0 ||
+      config.maxMonths < config.minMonths
+    ) {
+      return property.age;
+    }
+
+    const min = config.minMonths - elapsed;
+    const max = config.maxMonths - elapsed;
+
+    // Ready begins at 1 month remaining or less.
+    if (min <= 1) {
+      const monthsReady = Math.max(
+        0,
+        elapsed - (config.minMonths - 1)
+      );
+
+      return monthsReady === 0
+        ? "Ready"
+        : `Ready (${pluralize(monthsReady, "month")})`;
+    }
+
+    // Status is based on the minimum months remaining.
+    let status;
+
+    if (min >= 18 && min <= 20) {
+      status = "Prebooking";
+    } else if (min >= 14 && min <= 17) {
+      status = "Booking";
+    } else if (min >= 2 && min <= 13) {
+      status = "Under Construction";
+    } else {
+      // Avoid unexpected status changes outside the specified ranges.
+      status = config.status;
+    }
+
+    return `${status} (${formatMonthRange(min, max)})`;
+  }
+
+  return property.age;
+}
+
 
 
 function floorListHTML(floors = [], listMode = false){
@@ -88,29 +267,10 @@ function renderGrid(){
               ${tagRowsHTML(p.tags, false)}
             </div>
             <div class="link-list">
-              <div class="link-item action">
-                ${ICON_PRESENTATION}
-                <span>
-                  ${
-                    p.presentation === "#"
-                      ? "Presentation not available"
-                      : `<a href="${p.presentation}" target="_blank" rel="noopener">Site Presentation</a>`
-                  }
-                </span>
-              </div>
-
-              <div class="link-item loc">
-                ${ICON_PIN}
-                ${
-                  p.locationUrl === "#"
-                    ? "<span>Location Not Available</span>"
-                    : `<a href="${p.locationUrl}" target="_blank" rel="noopener">Click here for Location</a>`
-                }
-              </div>
-
+               ${ p.presentation && p.presentation !== "#" ? ` <div class="link-item action"> ${ICON_PRESENTATION} <span> <a href="${p.presentation}" target="_blank" rel="noopener"> Site Presentation </a> </span> </div> ` : "" } ${ p.locationUrl && p.locationUrl !== "#" ? ` <div class="link-item loc"> ${ICON_PIN} <a href="${p.locationUrl}" target="_blank" rel="noopener"> Click here for Location </a> </div> ` : "" }
               <div class="link-item info">
                 ${ICON_BUILDING}
-                <span>${p.age}</span>
+                <span>${getDynamicAge(p)}</span>
               </div>
             </div>
           </article>
@@ -140,29 +300,14 @@ function renderList(){
               ${tagRowsHTML(p.tags, true)}
             </div>
 
-            <div class="list-col action">
-              ${ICON_PRESENTATION}
-              <span>
-                ${
-                  p.presentation === "#"
-                    ? "Presentation not available"
-                    : `<a href="${p.presentation}" target="_blank" rel="noopener">Site Presentation</a>`
-                }
-              </span>
-            </div>
+            
+            ${ p.presentation && p.presentation !== "#" ? ` <div class="list-col action"> ${ICON_PRESENTATION} <span> <a href="${p.presentation}" target="_blank" rel="noopener"> Site Presentation </a> </span> </div> ` : "" } ${ p.locationUrl && p.locationUrl !== "#" ? ` <div class="list-col loc"> ${ICON_PIN} <a href="${p.locationUrl}" target="_blank" rel="noopener"> Click here for Location </a> </div> ` : "" }
 
-            <div class="list-col loc">
-              ${ICON_PIN}
-              ${
-                p.locationUrl === "#"
-                  ? "<span>Location Not Available</span>"
-                  : `<a href="${p.locationUrl}" target="_blank" rel="noopener">Click here for Location</a>`
-              }
-            </div>
+          
 
             <div class="list-col info">
               ${ICON_BUILDING}
-              <span>${p.age}</span>
+              <span>${getDynamicAge(p)}</span>
             </div>
           </div>
         `).join('')}
