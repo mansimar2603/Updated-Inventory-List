@@ -17,31 +17,31 @@ const LOCALITIES = [
   referenceDate: "2026-10-10",
   minMonths: 10,
   maxMonths: 12
-}, locationUrl:"https://www.google.com/maps/place/28%C2%B033'38.3%22N+77%C2%B010'03.6%22E/@28.5606461,77.1651039,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5606461!4d77.1676788!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1xb5bNqtT_QTvcjGQklRpzQys3apd9xQ7/view?usp=sharing" },
+}, locationUrl:"https://maps.app.goo.gl/nM2pEaR8y8T7r7H76", presentation: "https://drive.google.com/file/d/1xb5bNqtT_QTvcjGQklRpzQys3apd9xQ7/view?usp=sharing" },
       { code:"F - 3/16 Vasant Vihar", floors:["Ground Floor with Basement", "Third Floor with Terrace","First Floor"], tags:[["400 sq yards","West Facing","Rear Park"]], age:"Ready (1-2 months)", ageConfig: {
   type: "ready",
   readyDate: "2026-08-10"
-}, locationUrl:"https://www.google.com/maps/place/28%C2%B033'32.0%22N+77%C2%B009'38.5%22E/@28.5588741,77.158123,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5588741!4d77.1606979!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1weTMvDWfY0FbQCNIaYJlpImzNEBI92rv/view?usp=sharing" },
-      { code:"B - 7/1B Vasant Vihar", floors:["Second Floor"], tags:[["280 sq yards","Park Facing"],["North East Facing","BOOKING"]], age:"Under Construction (12 months)", ageConfig: {
+}, locationUrl:"https://www.google.com/maps/place/3%2F16,+F+3+St,+Block+F,+Vasant+Vihar,+New+Delhi,+Delhi+110057/@28.55875,77.161122,728m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390d1dba93dddeeb:0x54253ba05748aa47!8m2!3d28.55875!4d77.161122!16s%2Fg%2F11j65zf9qr!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1weTMvDWfY0FbQCNIaYJlpImzNEBI92rv/view?usp=sharing" },
+      { code:"B - 7/1B Vasant Vihar", floors:["Second Floor"], tags:[["280 sq yards","Park Facing"],["North East Facing"]], age:"Under Construction (12 months)", ageConfig: {
   type: "construction",
   status: "Under Construction",
   referenceDate: "2026-10-10",
   minMonths: 12,
   maxMonths: 12
-}, locationUrl:"https://www.google.com/maps/place/28%C2%B033'56.5%22N+77%C2%B009'43.6%22E/@28.5657043,77.1595421,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5657043!4d77.162117!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1zDZGQ_emKB2Aev27QAfPBuZSCVJkhx5S/view?usp=sharing" },
+}, locationUrl:"https://maps.app.goo.gl/P9ToqgVUZrN5Et3M6", presentation: "https://drive.google.com/file/d/1zDZGQ_emKB2Aev27QAfPBuZSCVJkhx5S/view?usp=sharing" },
       { code:"C - 1/9 Vasant Vihar", floors:["Third Floor with Terrace"], tags:[["600 sq yards","Corner"],["Old Construction","West Facing"]], age:"Old Resale (11-12 years)", ageConfig: {
   type: "old-resale-years-range",
   referenceDate: "2026-10-10",
   minYears: 11,
   maxYears: 12
-},locationUrl:"https://www.google.com/maps/place/28%C2%B034'14.3%22N+77%C2%B009'42.6%22E/@28.5706387,77.1592522,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5706387!4d77.1618271?hl=en&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+},locationUrl:"https://maps.app.goo.gl/6PnRKs6pqFwKraFH8", presentation: "#" },
       { code:"B - 1/27 Vasant Vihar", floors:["Second Floor"], tags:[["400 sq yards", "North East Facing"]], age:"Prebooking (18–20 months)", ageConfig: {
   type: "construction",
   status: "Prebooking",
   referenceDate: "2026-10-10",
   minMonths: 18,
   maxMonths: 20
-}, locationUrl:"https://www.google.com/maps/place/28%C2%B034'06.6%22N+77%C2%B009'47.5%22E/@28.5684967,77.1606178,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5684967!4d77.1631927?hl=en&entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+}, locationUrl:"https://maps.app.goo.gl/4UpK7vhmVjZFmEgz5", presentation: "#" },
       // { code:"D - 1/22 Vasant Vihar", floors:["First Floor"], tags:[["North East Facing","Old Construction"]], age:"Old Resale (18–20 months)", locationUrl:"#", presentation: "#" },
     ]
   },
@@ -54,20 +54,20 @@ const LOCALITIES = [
   referenceDate: "2026-10-10",
   minMonths: 16,
   maxMonths: 18
-}, locationUrl:"https://www.google.com/maps/place/28%C2%B034'40.8%22N+77%C2%B009'49.0%22E/@28.5779972,77.1610298,728m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d28.5779972!4d77.1636047!5m1!1e2?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+}, locationUrl:"https://www.google.com/maps/place/57,+C+Block+Rd,+Block+D,+Anand+Niketan,+New+Delhi,+Delhi+110021/@28.5777213,77.1629121,182m/data=!3m2!1e3!4b1!4m5!3m4!1s0x390d1d092950396d:0x55fd8e40712eb35d!8m2!3d28.5777201!4d77.1635558!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
       // { code:"C - 34 Anand Niketan", tags:[["Ground Floor","400 sq yards","Newly Renovated"],["Park Facing","25-Year-Old Construction","North Facing"]], age:"Old Resale (25 years)", locationUrl:"#" },
     ]
   },
   {
     name: "Greater Kailash - 1 (GK-1)",
     properties: [
-      { code:"E - 25 Greater Kailash-1", floors:["First Floor","Basement & Ground Floor"], tags:[["300 sq yards","Booking"],["North Facing"]], age:"Under Construction (12 months)", ageConfig: {
+      { code:"E - 25 Greater Kailash-1", floors:["First Floor","Basement & Ground Floor"], tags:[["300 sq yards", "North Facing"]], age:"Under Construction (12 months)", ageConfig: {
   type: "construction",
   status: "Under Construction",
   referenceDate: "2026-10-10",
   minMonths: 12,
   maxMonths: 12
-},locationUrl:"#", presentation: "#" },
+},locationUrl:"https://maps.app.goo.gl/W9s2c7mTugwMXEEd6", presentation: "#" },
     ]
   },
   {
@@ -77,7 +77,7 @@ const LOCALITIES = [
   type: "old-resale-years",
   referenceDate: "2026-10-10",
   years: 10
-}, locationUrl:"#", presentation: "#" },
+}, locationUrl:"https://www.google.com/maps/place/4%2F9,+Sector+2,+Shanti+Niketan,+New+Delhi,+Delhi+110021/@28.5775196,77.1688615,91m/data=!3m1!1e3!4m6!3m5!1s0x390d1d0b9cf48dab:0xca05f8dd0ae5fbf6!8m2!3d28.5776321!4d77.1692211!16s%2Fg%2F11h028_9dd!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
     ]
   }
 ];
