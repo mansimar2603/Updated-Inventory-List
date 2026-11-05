@@ -29,7 +29,7 @@ const LOCALITIES = [
   minMonths: 12,
   maxMonths: 12
 }, locationUrl:"https://maps.app.goo.gl/P9ToqgVUZrN5Et3M6", presentation: "https://drive.google.com/file/d/1zDZGQ_emKB2Aev27QAfPBuZSCVJkhx5S/view?usp=sharing" },
-      { code:"C - 1/9 Vasant Vihar", floors:["Third Floor with Terrace"], tags:[["600 sq yards","Corner"],["Old Construction","West Facing"]], age:"Old Resale (11-12 years)", ageConfig: {
+      { code:"C - 1/9 Vasant Vihar", floors:["Third Floor with Terrace"], tags:[["600 sq yards","Corner"],["Old Construction"]], age:"Old Resale (11-12 years)", ageConfig: {
   type: "old-resale-years-range",
   referenceDate: "2026-10-10",
   minYears: 11,
@@ -48,7 +48,7 @@ const LOCALITIES = [
   {
     name: "Anand Niketan",
     properties: [
-      { code:"C - 57 Anand Niketan", floors:["First Floor","Second Floor","Third Floor with Terrace"], tags:[["400 sq yards","Park Facing","South East Facing"]], age:"Booking  (16–18 months)",ageConfig: {
+      { code:"C - 57 Anand Niketan", floors:["First Floor","Second Floor","Third Floor with Terrace"], tags:[["400 sq yards","Park Facing","East Facing"]], age:"Booking  (16–18 months)",ageConfig: {
   type: "construction",
   status: "Booking",
   referenceDate: "2026-10-10",
@@ -70,16 +70,16 @@ const LOCALITIES = [
 },locationUrl:"https://maps.app.goo.gl/W9s2c7mTugwMXEEd6", presentation: "#" },
     ]
   },
-  {
-    name: "Shanti Niketan",
-    properties: [
-      { code:"4/9, Shanti Niketan", floors:["Ground Floor with Basement(Front Portion)"], tags:[["North East Facing"]], age:"Old Resale (10 years)", ageConfig: {
-  type: "old-resale-years",
-  referenceDate: "2026-10-10",
-  years: 10
-}, locationUrl:"https://www.google.com/maps/place/4%2F9,+Sector+2,+Shanti+Niketan,+New+Delhi,+Delhi+110021/@28.5775196,77.1688615,91m/data=!3m1!1e3!4m6!3m5!1s0x390d1d0b9cf48dab:0xca05f8dd0ae5fbf6!8m2!3d28.5776321!4d77.1692211!16s%2Fg%2F11h028_9dd!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
-    ]
-  }
+//   {
+//     name: "Shanti Niketan",
+//     properties: [
+//       { code:"4/9, Shanti Niketan", floors:["Ground Floor with Basement(Front Portion)"], tags:[["North East Facing"]], age:"Old Resale (10 years)", ageConfig: {
+//   type: "old-resale-years",
+//   referenceDate: "2026-10-10",
+//   years: 10
+// }, locationUrl:"https://www.google.com/maps/place/4%2F9,+Sector+2,+Shanti+Niketan,+New+Delhi,+Delhi+110021/@28.5775196,77.1688615,91m/data=!3m1!1e3!4m6!3m5!1s0x390d1d0b9cf48dab:0xca05f8dd0ae5fbf6!8m2!3d28.5776321!4d77.1692211!16s%2Fg%2F11h028_9dd!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
+//     ]
+//   }
 ];
 
 
