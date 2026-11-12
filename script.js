@@ -11,22 +11,22 @@ const LOCALITIES = [
   {
     name: "Vasant Vihar",
     properties: [
-      { code:"A - 16/5 Vasant Vihar", floors:["Ground Floor with Basement","2nd Floor"], tags:[["400 sq yards","South Facing"]], age:"Under Construction (10-12 months)", ageConfig: {
+      { code:"A - 16/5 Vasant Vihar", floors:["Ground Floor with Basement","2nd Floor"], tags:[["400 sq yards","Wide Road"]], age:"Under Construction (5-6 months)", ageConfig: {
   type: "construction",
   status: "Under Construction",
   referenceDate: "2026-10-10",
-  minMonths: 10,
-  maxMonths: 12
+  minMonths: 6,
+  maxMonths: 7
 }, locationUrl:"https://maps.app.goo.gl/nM2pEaR8y8T7r7H76", presentation: "https://drive.google.com/file/d/1xb5bNqtT_QTvcjGQklRpzQys3apd9xQ7/view?usp=sharing" },
-      { code:"F - 3/16 Vasant Vihar", floors:["Ground Floor with Basement", "Third Floor with Terrace","First Floor"], tags:[["400 sq yards","West Facing","Rear Park"]], age:"Ready (1-2 months)", ageConfig: {
+      { code:"F - 3/16 Vasant Vihar", floors:["Ground Floor with Basement", "Third Floor with Terrace","First Floor"], tags:[["400 sq yards","Rear Park"]], age:"Ready", ageConfig: {
   type: "ready",
-  readyDate: "2026-08-10"
+  readyDate: "2026-10-10"
 }, locationUrl:"https://www.google.com/maps/place/3%2F16,+F+3+St,+Block+F,+Vasant+Vihar,+New+Delhi,+Delhi+110057/@28.55875,77.161122,728m/data=!3m2!1e3!4b1!4m6!3m5!1s0x390d1dba93dddeeb:0x54253ba05748aa47!8m2!3d28.55875!4d77.161122!16s%2Fg%2F11j65zf9qr!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D", presentation: "https://drive.google.com/file/d/1weTMvDWfY0FbQCNIaYJlpImzNEBI92rv/view?usp=sharing" },
-      { code:"B - 7/1B Vasant Vihar", floors:["Second Floor"], tags:[["280 sq yards","Park Facing"],["North East Facing"]], age:"Under Construction (12 months)", ageConfig: {
+      { code:"B - 7/1B Vasant Vihar", floors:["Second Floor"], tags:[["280 sq yards","Park Facing"],["North East Facing"]], age:"Under Construction (10-11 months)", ageConfig: {
   type: "construction",
-  status: "Under Construction",
+  status: "Under Construction (10-11 months)",
   referenceDate: "2026-10-10",
-  minMonths: 12,
+  minMonths: 11,
   maxMonths: 12
 }, locationUrl:"https://maps.app.goo.gl/P9ToqgVUZrN5Et3M6", presentation: "https://drive.google.com/file/d/1zDZGQ_emKB2Aev27QAfPBuZSCVJkhx5S/view?usp=sharing" },
       { code:"C - 1/9 Vasant Vihar", floors:["Third Floor with Terrace"], tags:[["600 sq yards","Corner"],["Old Construction"]], age:"Old Resale (11-12 years)", ageConfig: {
@@ -35,12 +35,12 @@ const LOCALITIES = [
   minYears: 11,
   maxYears: 12
 },locationUrl:"https://maps.app.goo.gl/6PnRKs6pqFwKraFH8", presentation: "#" },
-      { code:"B - 1/27 Vasant Vihar", floors:["Second Floor"], tags:[["400 sq yards", "North East Facing"]], age:"Prebooking (18–20 months)", ageConfig: {
+      { code:"B - 1/27 Vasant Vihar", floors:["Second Floor"], tags:[["400 sq yards", "North East Facing"]], age:"Prebooking (17–18 months)", ageConfig: {
   type: "construction",
   status: "Prebooking",
   referenceDate: "2026-10-10",
   minMonths: 18,
-  maxMonths: 20
+  maxMonths: 19
 }, locationUrl:"https://maps.app.goo.gl/4UpK7vhmVjZFmEgz5", presentation: "#" },
       // { code:"D - 1/22 Vasant Vihar", floors:["First Floor"], tags:[["North East Facing","Old Construction"]], age:"Old Resale (18–20 months)", locationUrl:"#", presentation: "#" },
     ]
@@ -48,12 +48,12 @@ const LOCALITIES = [
   {
     name: "Anand Niketan",
     properties: [
-      { code:"C - 57 Anand Niketan", floors:["First Floor","Second Floor","Third Floor with Terrace"], tags:[["400 sq yards","Park Facing","East Facing"]], age:"Booking  (16–18 months)",ageConfig: {
+      { code:"C - 57 Anand Niketan", floors:["First Floor","Second Floor","Third Floor with Terrace"], tags:[["400 sq yards","Park Facing","East Facing"]], age:"Booking  (15–16 months)",ageConfig: {
   type: "construction",
   status: "Booking",
   referenceDate: "2026-10-10",
   minMonths: 16,
-  maxMonths: 18
+  maxMonths: 17
 }, locationUrl:"https://www.google.com/maps/place/57,+C+Block+Rd,+Block+D,+Anand+Niketan,+New+Delhi,+Delhi+110021/@28.5777213,77.1629121,182m/data=!3m2!1e3!4b1!4m5!3m4!1s0x390d1d092950396d:0x55fd8e40712eb35d!8m2!3d28.5777201!4d77.1635558!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MTAwNy4wIKXMDSoASAFQAw%3D%3D", presentation: "#" },
       // { code:"C - 34 Anand Niketan", tags:[["Ground Floor","400 sq yards","Newly Renovated"],["Park Facing","25-Year-Old Construction","North Facing"]], age:"Old Resale (25 years)", locationUrl:"#" },
     ]
@@ -61,11 +61,11 @@ const LOCALITIES = [
   {
     name: "Greater Kailash - 1 (GK-1)",
     properties: [
-      { code:"E - 25 Greater Kailash-1", floors:["First Floor","Basement & Ground Floor"], tags:[["300 sq yards", "North Facing"]], age:"Under Construction (12 months)", ageConfig: {
+      { code:"E - 25 Greater Kailash-1", floors:["First Floor","Basement & Ground Floor"], tags:[["300 sq yards", "North Facing"]], age:"Under Construction (10-11 months)", ageConfig: {
   type: "construction",
-  status: "Under Construction",
+  status: "Under Construction(10-11 months)",
   referenceDate: "2026-10-10",
-  minMonths: 12,
+  minMonths: 11,
   maxMonths: 12
 },locationUrl:"https://maps.app.goo.gl/W9s2c7mTugwMXEEd6", presentation: "#" },
     ]
@@ -301,7 +301,7 @@ function renderList(){
             </div>
 
             
-            ${ p.presentation && p.presentation !== "#" ? ` <div class="list-col action"> ${ICON_PRESENTATION} <span> <a href="${p.presentation}" target="_blank" rel="noopener"> Site Presentation </a> </span> </div> ` : "" } ${ p.locationUrl && p.locationUrl !== "#" ? ` <div class="list-col loc"> ${ICON_PIN} <a href="${p.locationUrl}" target="_blank" rel="noopener"> Click here for Location </a> </div> ` : "" }
+            ${ p.presentation && p.presentation !== "#" ? ` <div class="list-col action"> ${ICON_PRESENTATION} <span> <a href="${p.presentation}" target="_blank" rel="noopener"> Site Presentation </a> </span> </div> ` : `<pre>      -    </pre>` } ${ p.locationUrl && p.locationUrl !== "#" ? ` <div class="list-col loc"> ${ICON_PIN} <a href="${p.locationUrl}" target="_blank" rel="noopener"> Click here for Location </a> </div> ` : "     -" }
 
           
 
